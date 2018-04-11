@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>ReactJS 101</title>
+        <link rel="stylesheet" href="./index.css" />
+    </head>
+    <body>
+        <section class="todoapp" id="app">
+            <header class="header">
+                <h1>todos</h1>
+                <input class="new-todo" placeholder="What needs to be done?" autofocus>
+            </header>
+
+            <section class="main">
+                <input id="toggle-all" class="toggle-all" type="checkbox">
+                <label for="toggle-all">Mark all as complete</label>
+                <ul class="todo-list">
+                    <li class="completed">
+                        <div class="view">
+                            <input class="toggle" type="checkbox" checked>
+                            <label>Taste JavaScript</label>
+                            <button class="destroy"></button>
+                        </div>
+                        <input class="edit" value="Create a TodoMVC template">
+                    </li>
+                    <li>
+                        <div class="view">
+                            <input class="toggle" type="checkbox">
+                            <label>Buy a unicorn</label>
+                            <button class="destroy"></button>
+                        </div>
+                        <input class="edit" value="Rule the web">
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <script src="./index.js"></script>
+    </body>
+</html>
