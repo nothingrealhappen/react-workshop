@@ -6,11 +6,13 @@ class Welcome extends Component {
         time: Date.now(),
     };
 
+    componentDidMount() {
+        setInterval(() => this.setState({ time: Date.now() }), 1000);
+    }
+
     render() {
         return <p>
             Hello, welcome to my world. {this.state.time}
-            <br/>
-            <button onClick={() => this.setState({ time: Date.now() })}>update</button>
         </p>;
     }
 }

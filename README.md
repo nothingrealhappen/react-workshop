@@ -79,6 +79,23 @@ class Welcome extends Component {
 ```
 
 ## automachine: use setinterval and lifecycle to update state
+```
+class Welcome extends Component {
+    state = {
+        time: Date.now(),
+    };
+
+    componentDidMount() {
+        setInterval(() => this.setState({ time: Date.now() }), 1000);
+    }
+
+    render() {
+        return <p>
+            Hello, welcome to my world. {this.state.time}
+        </p>;
+    }
+}
+```
 
 # TODO Footer Features
 
