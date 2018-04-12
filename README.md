@@ -376,10 +376,20 @@ render(<TodoMvc />, document.querySelector('#app'));
 
 [另一种选择，uncontrolled component](https://reactjs.org/docs/uncontrolled-components.html)
 
+## 组件的数据传递和设计思想
+- 通过 props 向下传递数据
+- 通过 callback 告知父层组件的变化
+- 通过 state management 打通平级组件以及更好的组件通讯
+- Dumy UI 组件
+- Container 组件
+
 # WorkShop Time TODOMVC
 [http://todomvc.com/examples/react/#/](http://todomvc.com/examples/react/#/)
 
 HTML template: `src/index.html`
 
-# react dev tool
+# React dev tool
 [https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+
+# Futher reading
+https://medium.com/shoutem/react-to-bind-or-not-to-bind-7bf58327e22a
