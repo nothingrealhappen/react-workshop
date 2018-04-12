@@ -1,44 +1,35 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
-const LoggedIn = ({ name, onClick }) => (
-    <p>
-        Hi, {name}. you already logged in. want{' '}
-        <button onClick={onClick}>Logout</button>
-        ?
-    </p>
-);
-
-const LoggedOut = ({ onClick }) => (
-    <p>
-        Hi, come on <button onClick={onClick}>Login</button>
-    </p>
-);
-
-class Welcome extends Component {
+class TodoMvc extends Component {
     state = {
-        isLoggedIn: false,
+        todos: [],
+        newItem: '',
     };
 
-    login = () => {
-        this.setState({ isLoggedIn: true });
+    handleSubmit = e => {
+        e.preventDefault();
+        alert(this.state.newItem);
     };
 
-    logout = () => {
-        this.setState({ isLoggedIn: false });
-    };
+    handleChange = e => this.setState({ newItem: e.target.value });
 
     render() {
         return (
-            <span>
-                {this.state.isLoggedIn ? (
-                    <LoggedIn onClick={this.logout} />
-                ) : (
-                    <LoggedOut onClick={this.login} />
-                )}
-            </span>
+            <form onSubmit={this.handleSubmit}>
+                <header className="header">
+                    <h1>todos</h1>
+                    <input
+                        className="new-todo"
+                        placeholder="What needs to be done?"
+                        autofocus
+                        onChange={this.handleChange}
+                        value={this.state.newItem}
+                    />
+                </header>
+            </form>
         );
     }
 }
 
-render(<Welcome />, document.querySelector('#app'));
+render(<TodoMvc />, document.querySelector('#app'));
