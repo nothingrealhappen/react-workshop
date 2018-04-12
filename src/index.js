@@ -1,19 +1,43 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
+const LoggedIn = ({ name, onClick }) => (
+    <p>
+        Hi, {name}. you already logged in. want{' '}
+        <button onClick={onClick}>Logout</button>
+        ?
+    </p>
+);
+
+const LoggedOut = ({ onClick }) => (
+    <p>
+        Hi, come on <button onClick={onClick}>Login</button>
+    </p>
+);
+
 class Welcome extends Component {
     state = {
-        time: Date.now(),
+        isLoggedIn: false,
     };
 
-    componentDidMount() {
-        setInterval(() => this.setState({ time: Date.now() }), 1000);
-    }
+    login = () => {
+        this.setState({ isLoggedIn: true });
+    };
+
+    logout = () => {
+        this.setState({ isLoggedIn: false });
+    };
 
     render() {
-        return <p>
-            Hello, welcome to my world. {this.state.time}
-        </p>;
+        return (
+            <span>
+                {this.state.isLoggedIn ? (
+                    <LoggedIn onClick={this.logout} />
+                ) : (
+                    <LoggedOut onClick={this.login} />
+                )}
+            </span>
+        );
     }
 }
 

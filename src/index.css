@@ -18,6 +18,11 @@ button {
 	appearance: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+}
+
+button:hover {
+    background-color: #f0f;
 }
 
 body {
