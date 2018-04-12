@@ -139,6 +139,7 @@ render(<Hello a="1" b={Date.now()} />, document.querySelector('#app'));
 ```
 
 #### class component
+[class properity](https://babeljs.io/repl/#?babili=false&browsers=&build=&builtIns=false&code_lz=ATDGBsEMGduAhA9gJwNbAN4CgQgPR4AKyiADgKbIAuAnsAJYB29V9k49AXpcNDY1UgAPHLibRBjUOWJlKtYAF5gAIgBGKVCoDcokBoCujACYAxI6FaJGS4AAoAlEoB8mPbmTkqB5DaoALemgAOnFJaVkKahpdXGAAX3d3CBhoAFkvf0RjRzc4kFBraERwcmDwRABzOwCggBpgAHIAM0RERodY3ET3AgBlQVZQMChYYFISKNZyaHcJSCHeQfpQSPk6ZXVINXJwAEloAGE28B055eH5ofMpKxtlZos73Ox84E9vXwRNYKuVteiXRAiWBWFEpSowAAtjQkGhbIxyAB3b5oXSiAgAhRMFhsDjcZBwSCeYCMRCQ6zAALkcYkKjkmgUYKiQqMYqlcpVOwwuGoYIAfX5E3JiEFwUMJhulno1k6wAIwFcRmM5GaTHIxjB-DwSGVwEetxlbOAxJpEuMVMQVP8NJSYzCkCkZRZRRKZQq1R5P3NUruwVA7HAdmVqvVxgccoVrnUmhUWvleAGCxW-qeRuA5CEQSocEp1JGqWZBVdHI9dl5vwuvqNjkjeEVqjU212B2OJTjQA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&lineWrap=true&presets=es2015%2Creact%2Cstage-0&prettier=false&targets=&version=6.26.0&envVersion=)
 
 ```
 import React, { Component } from 'react';
